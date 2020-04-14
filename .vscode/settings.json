@@ -1,0 +1,9 @@
+{
+    "git.ignoreLimitWarning": true,
+    "cSpell.ignoreWords": [
+        "api",
+        "appid",
+        "openweathermap",
+        "weathermap"
+    ]
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/main.css">
+    <title>Weather map</title>
+</head>
+<body>
+    
+    <div class="container">
+    <h3>Enter City Name Below</h3>
+    <form action="/api/weather" method="POST">
+        <input placeholder="City ...." name="city" />
+        <button type="submit">Search</button>
+    </form n>
+    </div>
+    <div class="weather">
+     {{#if temp }}
+        <h2>The Weather</h2>
+        <h4>Today's Temperature is {{ temp }}°C in {{ city }}, {{ country }} <br />
+        Please expect {{ weather }} {{ icon }}
+        </h4>
+    {{/if}}
+    </div>
+    </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
