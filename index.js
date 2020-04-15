@@ -5,6 +5,7 @@ const request = require('request');
 const app = express();
 
 
+
 const publicDirectory = path.join(__dirname, './public');
 const viewsPath = path.join(__dirname, './views');
 
@@ -14,6 +15,8 @@ app.use(express.static(publicDirectory));
 app.use(express.urlencoded());
 // Parse JSON bodies (as sent by API clients)
 app.use(express.json());
+
+app.use(express.static('/public/images')); 
 
 app.set('view engine', 'hbs');
 app.set('views', viewsPath);
@@ -37,14 +40,16 @@ app.post('/api/weather', (req, res) => {
 
 
     request({url: weatherUrl, json: true}, (error, response) => {
-        console.log(response.body)
-       
+        console.log(response.body.weather[0].icon)
+
         res.render('index', {
             temp: response.body.main.temp,
             city: req.body.city,
             country: response.body.sys.country,
             weather: response.body.weather[0].description,
-            // icon: response.body.weather[0].icon + ".png"
+            tempMax: response.body.main.temp_max,
+            tempMin: response.body.main.temp_min,
+            icon: response.body.weather[0].icon
         })
     })
 

@@ -8,8 +8,9 @@
 
 
 body {
-    background-color: #cae0e6;
-    color: rgb(69, 72, 82);
+    background: radial-gradient(circle, rgba(67,145,255,1) 0%, rgba(190,117,255,0.6222864145658263) 100%);
+    color: rgb(179, 179, 179);
+    
 }
 .container {
     display: flex;
@@ -18,9 +19,10 @@ body {
     justify-content: space-between;
     font-family: 'Abel', sans-serif;
     margin: 50px 300px;
-    background-color: #afc4c9;
+    background: radial-gradient(circle, rgba(172,67,255,1) 0%, rgba(47,51,231,0.6222864145658263) 100%);;
     border: 1px solid rgb(69, 72, 82);
     padding: 50px;
+    box-shadow: 10px 10px 5px #351b86;
 }
 
 h3 {
@@ -39,7 +41,19 @@ button {
     align-items: center;
     justify-content: space-between;
     font-family: 'Abel', sans-serif;
-    margin: 50px 300px;
-    background-color: #afc4c9;
-    padding: 10px 0px 100px 0px;
+    margin: 0px 300px;
+    background: radial-gradient(circle, rgba(172,67,255,1) 0%, rgba(51, 54, 228, 0.622) 100%);
+    padding: 20px 0px 100px 0px;
+    border-radius: 20%;
+    box-shadow: 10px 10px 5px #351b86;
+}
+
+.temp {
+    color: white;
+    display: inline-block;
+    letter-spacing: 0.5px;
+}
+
+img {
+    width: 50px;
 }

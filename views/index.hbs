@@ -16,13 +16,18 @@
         <button type="submit">Search</button>
     </form n>
     </div>
-    <div class="weather">
-     {{#if temp }}
+    {{#if temp }}
+        <div class="weather">
+    
         <h2>The Weather</h2>
-        <h4>Today's Temperature is {{ temp }}°C in {{ city }}, {{ country }} <br />
-        Please expect {{ weather }} {{ icon }}
+        <h4>Today's Temperature is <div class="temp">{{ temp }}°C</div> in {{ city }}, {{ country }} <br />
+        Please expect {{ weather }} <img src="http://openweathermap.org/img/wn/{{icon}}@2x.png" /><br />
+        The Maximum temperature <div class="temp">{{ tempMax }}°C</div> <br />
+        The Minimum temperature <div class="temp">{{ tempMin }}°C</div> 
         </h4>
     {{/if}}
+
+    
     </div>
     </div>
 
