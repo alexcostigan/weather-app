@@ -45,7 +45,7 @@ button {
     background: radial-gradient(circle, rgba(174, 67, 255, 0.582) 0%, rgba(51, 54, 228, 0.622) 100%);
     padding: 20px 0px 100px 0px;
     border-radius: 20%;
-    box-shadow: 10px 10px 5px #351b86;
+    box-shadow: 10px 10px 5px #1a0d42;
 }
 
 .temp {
